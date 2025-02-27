@@ -12,8 +12,20 @@
       "dest": "/public/$1"
     },
     {
+      "src": "/logo-dark.png",
+      "dest": "/public/logo-dark.png"
+    },
+    {
+      "src": "/logo-white.png",
+      "dest": "/public/logo-white.png"
+    },
+    {
       "src": "/build/(.*)",
       "dest": "/public/build/$1"
+    },
+    {
+      "src": "/dist/(.*)",
+      "dest": "/public/dist/$1"
     },
     {
       "src": "/(.*)",
