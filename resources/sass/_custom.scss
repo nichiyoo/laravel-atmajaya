@@ -1,0 +1,21 @@
+$sidebar-width: 17rem;
+
+.logo {
+  width: 12rem;
+}
+
+.logo-small {
+  width: 8rem;
+}
+
+@media (min-width: 992px) {
+  .navbar-vertical.navbar-expand-lg {
+    width: $sidebar-width;
+    overflow: hidden;
+  }
+
+  .navbar-expand-lg.navbar-vertical~.navbar,
+  .navbar-expand-lg.navbar-vertical~.page-wrapper {
+    margin-left: $sidebar-width;
+  }
+}

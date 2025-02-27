@@ -1,0 +1,56 @@
+$primary-color: #ff6e03;
+$primary-color--lighten: #ff7d21;
+$primary-color--darken: #e96100;
+
+$primary-dark-color: #092735;
+$primary-dark-color--lighten: #0a3449;
+$primary-dark-color--darken: #06212e;
+
+@function hexToTablerRGB($color) {
+  @return red($color), green($color), blue($color);
+}
+
+:root,
+:host {
+  --tblr-font-sans-serif: 'Inter', sans-serif;
+  --tblr-border-radius: 5px;
+  --tblr-page-padding: 2rem;
+
+  .navbar-dark {
+    --tblr-navbar-border-color: #{$primary-color--lighten};
+    --tblr-navbar-bg: #{$primary-color};
+    --tblr-navbar-active-bg: rgba(hexToTablerRGB($primary-color), 0.06);
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  --tblr-border-color: #e6e7e9;
+  --tblr-highlight-bg: #fdeccc;
+
+  --tblr-primary: #{$primary-color};
+  --tblr-primary-darken: #{$primary-color--darken};
+  --tblr-primary-rgb: #{hexToTablerRGB($primary-color)};
+
+  --tblr-font-size-h1: 2rem;
+  --tblr-font-size-h2: 1.75rem;
+  --tblr-font-size-h3: 1.5rem;
+  --tblr-font-size-h4: 1.25rem;
+  --tblr-font-size-h5: 1rem;
+  --tblr-font-size-h6: 0.75rem;
+
+  --tblr-line-height-h1: auto;
+  --tblr-line-height-h2: auto;
+  --tblr-line-height-h3: auto;
+  --tblr-line-height-h4: auto;
+  --tblr-line-height-h5: auto;
+  --tblr-line-height-h6: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bricolage Grotesque', var(--tblr-font-sans-serif);
+  font-weight: bold !important;
+}
