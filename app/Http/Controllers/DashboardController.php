@@ -37,11 +37,11 @@ class DashboardController extends Controller
     $gpa_distribution = User::where('role', 'student')
       ->select(DB::raw('
               CASE
-                  WHEN cummulative_gpa < 1 THEN "0.00 - 0.99"
-                  WHEN cummulative_gpa < 2 THEN "1.00 - 1.99"
-                  WHEN cummulative_gpa < 3 THEN "2.00 - 2.99"
-                  WHEN cummulative_gpa < 4 THEN "3.00 - 3.99"
-                  ELSE "4.00"
+                  WHEN cummulative_gpa < 1 THEN \'0.00 - 0.99\'
+                  WHEN cummulative_gpa < 2 THEN \'1.00 - 1.99\'
+                  WHEN cummulative_gpa < 3 THEN \'2.00 - 2.99\'
+                  WHEN cummulative_gpa < 4 THEN \'3.00 - 3.99\'
+                  ELSE \'4.00\'
               END as gpa_range
           '), DB::raw('COUNT(*) as count'))
       ->groupBy('gpa_range')
