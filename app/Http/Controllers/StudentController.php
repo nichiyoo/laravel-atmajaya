@@ -60,7 +60,7 @@ class StudentController extends Controller
   public function show(User $student)
   {
     return view('admin.students.show', [
-      'student' => $student,
+      'student' => $student->load('semesters', 'semesters.course'),
     ]);
   }
 

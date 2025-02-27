@@ -18,12 +18,12 @@ return new class extends Migration
       $table->foreignId('course_id')->constrained()->onDelete('cascade');
       $table->integer('semester');
       $table->integer('year');
-      $table->decimal('cw1', 4, 3)->nullable();
-      $table->decimal('cw2', 4, 3)->nullable();
-      $table->decimal('cw3', 4, 3)->nullable();
-      $table->decimal('cw4', 4, 3)->nullable();
-      $table->decimal('midterm', 4, 3)->nullable();
-      $table->decimal('final', 4, 3)->nullable();
+      $table->integer('cw1')->nullable();
+      $table->integer('cw2')->nullable();
+      $table->integer('cw3')->nullable();
+      $table->integer('cw4')->nullable();
+      $table->integer('midterm')->nullable();
+      $table->integer('final')->nullable();
     });
   }
 
